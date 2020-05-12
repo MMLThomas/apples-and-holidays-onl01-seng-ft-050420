@@ -66,7 +66,6 @@ def all_supplies_in_holidays(holiday_hash)
       if holiday_formated.include?("_")
         under = holiday_formated.index("_")
         holiday_formated[under] = " "
-        holiday_formated[under + 1].capitalize!
       end 
       holiday_formated.capitalize!
       supply_formated = supply.join(", ")
