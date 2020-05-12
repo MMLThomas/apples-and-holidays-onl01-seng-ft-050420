@@ -69,8 +69,9 @@ def all_supplies_in_holidays(holiday_hash)
         binding.pry
         holiday_formated = holiday_formated.join(" ")
         binding.pry
-      end 
+      else
       holiday_formated.capitalize!
+      end
       supply_formated = supply.join(", ")
       puts "  #{holiday_formated}: #{supply_formated}"
     end
