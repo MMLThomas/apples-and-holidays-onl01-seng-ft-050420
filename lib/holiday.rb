@@ -64,7 +64,8 @@ def all_supplies_in_holidays(holiday_hash)
     hashes.each do |holiday, supply|
       holiday_formated = holiday.to_s
       if holiday_formated.include?("_")
-        under = holiday_formated.index("_")
+        holiday_formated.split("_")
+        hol
         holiday_formated[under] = " "
       end 
       holiday_formated.capitalize!
