@@ -63,12 +63,11 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.capitalize}:"
     hashes.each do |holiday, supply|
       holiday_formated = holiday.to_s
-      if holiday.include?("_")
-        under = holiday.index("_")
-        holiday(under) = " "
-        holiday(under + 1) = holiday(under + 1).capitalize!
-      end
-      holiday_formated = holiday.to_s
+      if holiday_formated.include?("_")
+        under = holiday_formated.index("_")
+        holiday_formated[under] = " "
+        holiday_formated[under + 1].capitalize!
+      end 
       holiday_formated.capitalize!
       supply_formated = supply.join(", ")
       binding.pry
